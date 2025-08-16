@@ -11,7 +11,7 @@ const page = () => {
                 <h1>
                     Hi There!
                 </h1>
-                <p>I'm a <span> 
+                <p>I&apos;m a <span> 
                             <Typewriter
                                 words={["Web Designer", "Developer", "Freelancer"]}
                                 loop
