@@ -55,16 +55,19 @@ const page = () => {
       toast.error("enter a valid Email.");
       emailRef.current.classList.add("border-red-500");
       emailRef.current.style.outline = "2px solid #EF4444";
+      return;
     }  
 
-    if(name || email || subject || message){
+    if(!name || !email || !subject || !message){
+   
+      toast.error("Please fill all the fields!");
+    }else{
       toast.success("Message sent successfully!");
       setName("");
       setEmail("");
       setSubject("");
       setMessage("");
-    }else{
-      toast.error("Please fill all the fields!");
+      
     }
   }
   
@@ -92,8 +95,8 @@ const page = () => {
           <div className='w-[40%] gap-y-2 flex flex-col'>
             
             <p className=' border-[#7D7789] border-1 h-[100px] pl-[20px] flex items-center gap-x-2'><FaPhone className="text-[#2C98F0] text-2xl" />01902131906</p>
-            <p className=' border-[#7D7789] border-1 h-[100px] pl-[20px] flex items-center gap-x-2'>  <FaMapMarkerAlt className="text-[#2C98F0] text-2xl"/>webandappdev.sabbir@gmail.com</p>
-            <p className=' border-[#7D7789] border-1 h-[100px] pl-[20px] flex items-center gap-x-2'><MdMarkEmailUnread className="text-[#2C98F0] text-3xl"/>Daffodil Smart City, Birulia, Savar, Dhaka-1216, Bangladesh</p>    
+            <p className=' border-[#7D7789] border-1 h-[100px] pl-[20px] flex items-center gap-x-2'>  <MdMarkEmailUnread className="text-[#2C98F0] text-2xl"/>webandappdev.sabbir@gmail.com</p>
+            <p className=' border-[#7D7789] border-1 h-[100px] pl-[20px] flex items-center gap-x-2'><FaMapMarkerAlt className="text-[#2C98F0] text-3xl"/>Daffodil Smart City, Birulia, Savar, Dhaka-1216, Bangladesh</p>    
             
             
           </div>
